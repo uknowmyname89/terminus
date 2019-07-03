@@ -1,0 +1,42 @@
+.prod-item{
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  min-height: 15rem;
+  display: block;
+  text-decoration: none;
+  .img{
+    width: 100%;
+    object-fit: cover;
+    min-height: 15rem;
+  }
+  .row{
+    height: 100%;
+  }
+  &__name{
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  &__price{
+    font-weight: bold;
+    font-size: $txt-18px;
+    margin-bottom: 1rem;
+  }
+  &__block{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1.4rem;
+  }
+  .btn {
+    min-width: 70px;
+  }
+}
+
+
+.flat-holder{
+  border: 1px solid #eee;
+}
+
+

@@ -1,0 +1,30 @@
+$icons: (
+  ('ic1' '\e908' 1rem $c-black)
+  ('ic2' '\e909' 1rem $c-black)
+  ('ic3' '\e900' 1rem $c-black)
+  ('ic4' '\e901' 1rem $c-black)
+  ('vk' '\e904' 1rem $c-black)
+  ('fb' '\e907' 1rem $c-black)
+  ('ok' '\e902' 1rem $c-black)
+  ('yt' '\e905' 1rem $c-black)
+  ('cart' '\e906' 1rem $c-black)
+  ('dropdown' '\e90a' 0.5rem $c-black)
+  ('search_icon' '\e903' 1rem $c-black)
+);
+
+.icon {
+  font-family: 'icomoon';
+  font-size: 1rem;
+  font-style: normal;
+
+  @each $icon in $icons {
+    &_#{nth($icon, 1)} {
+      font-size: nth($icon, 3);
+      color: nth($icon, 4);
+
+      &:before{
+        content: nth($icon, 2);
+      }
+    }
+  }
+}

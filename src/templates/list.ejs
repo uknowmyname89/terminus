@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+  <%- include modules/header.ejs %>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Главная</a> » <a href="/">Покупателям</a> » Получение товара
+      </div>
+      <h1>Полотенцесушители</h1>
+    </div>
+    <hr class="mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 position-relative">
+          <div class="vert-line"></div>
+
+          <div class="list">
+            <div class="slab txt_18px mb-3 d-flex align-items-center" data-toggle="collapse" data-target="#products">Каталог товаров
+              <i class="mt-1 ml-auto mr-1 d-block txt_14px d-lg-none icon icon_dropdown"></i>
+            </div>
+            <div id="products" class="collapse">
+              <a class="d-block mb-2" href="#">Полотенцесушители</a>
+              <a class="d-block mb-2 txt-c-black" href="#">Электрические полотенцесушители</a>
+              <a class="d-block mb-2 txt-c-black" href="#">Водяные полотенцесушители</a>
+              <a class="d-block mb-2 txt-c-black" href="#">Аксессуары и комплектующие</a>
+            </div>
+          </div>
+          <hr>
+          <%- include modules/filter.ejs %>
+
+        </div>
+        <div class="col-lg-9">
+          <div class="row mt-4">
+            <% for(var i = 0; i < 9; i++){ %>
+              <div class="col-lg-4 col-sm-6 mb-3">
+                <%- include modules/item.ejs %>
+              </div>
+            <% } %>
+          </div>
+          <%- include modules/paginator.ejs %>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <%- include modules/footer.ejs %>
+
+</body>
+</html>

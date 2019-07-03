@@ -1,0 +1,54 @@
+.btn {
+  padding: 0.25rem 0.7rem;
+  color: $c-black;
+  background: #fff;
+  border: 1px solid $c-black;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: none!important;
+  text-decoration: none!important;
+  max-width: 100%;
+  white-space: normal;
+  font-size: $txt_12px;
+  outline: none;
+  min-height: 2rem;
+  text-align: center;
+  @extend %anim;
+  &:hover {
+    background: $c-red;
+    border-color: $c-red;
+    color: #fff;
+  }
+  &.white{
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+    &:hover {
+      background: #fff;
+      color: $c-red!important;
+    }
+  }
+  &.whitebg{
+    background: #fff;
+    border-color: #fff;
+    color: $c-black!important;
+    &:hover {
+      background: $c-red;
+      color: #fff!important;
+      border-color: $c-red;
+    }
+  }
+  &.red{
+    background: $c-red;
+    border-color: $c-red;
+    color: #fff;
+    &:hover {
+      background: darken($c-red, 25%);
+      border-color: darken($c-red, 25%);
+    }
+  }
+}
+
+button{
+  outline: none!important;
+}

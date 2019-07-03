@@ -1,0 +1,37 @@
+.footer{
+  * {
+    color: #fff!important;
+  }
+  background: $c-red;
+  padding: 2rem 0;
+  .icons{
+    a{
+      text-decoration: none;
+      i{
+        margin: 0.5rem;
+        color: #fff;
+        @media(max-width:1199px) {
+          margin-left: 0.6rem;
+        }
+      }
+    }
+    .icon_vk{
+      font-size: 0.9rem;
+    }
+    .icon_fb{
+
+    }
+    .icon_ok{
+
+    }
+    .icon_yt{
+
+    }
+  }
+  .navbar{
+    li {
+      display: inline-block;
+      margin: 0.5rem;
+    }
+  }
+}

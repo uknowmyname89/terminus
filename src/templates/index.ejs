@@ -1,15 +1,167 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Demo Page</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  </head>
-  <body>
-    <%- include modules/header.ejs %>
-    <div class="container mt-3 text-center">
-      <h1>Home</h1>
-      <img src="/assets/img/webpack.png" alt="">
+<head>
+  <title>Demo Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <%- include modules/header.ejs %>
+  <div class="bg-gray mb-minus-2 py-3"></div>
+  <div id="sliderMain" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="d-flex flex-column flex-lg-row align-items-center">
+          <div class="slider-text">
+            <p class="text-white slab txt_30px">Гарантия на 15 лет!</p>
+            <p class="text-white">Мы применяем современный метод лазерной сварки.
+              Благодаря высокоэффективным технологиям, сварочный шов
+              получается незаметным, а полотенцесушитель – прочным.</p>
+              <button class="btn whitebg mt-3 ajax-modal" type="button" data-remote="/modal.html" data-target="#modal">Обратный звонок</button>
+          </div>
+          <img class="d-block w-100" src="assets/img/slider.png" alt="">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex flex-column flex-lg-row align-items-center">
+          <div class="slider-text">
+            <p class="text-white slab txt_30px">Гарантия на 15 лет!</p>
+            <p class="text-white">Мы применяем современный метод лазерной сварки.
+              Благодаря высокоэффективным технологиям, сварочный шов
+              получается незаметным, а полотенцесушитель – прочным.</p>
+            <button class="btn whitebg mt-3 ajax-modal" type="button" data-remote="/modal.html" data-target="#modal">Обратный звонок</button>
+          </div>
+          <img class="d-block w-100" src="assets/img/slider2.png" alt="">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex flex-column flex-lg-row align-items-center">
+          <div class="slider-text">
+            <p class="text-white slab txt_30px">Гарантия на 15 лет!</p>
+            <p class="text-white">Мы применяем современный метод лазерной сварки.
+              Благодаря высокоэффективным технологиям, сварочный шов
+              получается незаметным, а полотенцесушитель – прочным.</p>
+            <button class="btn whitebg mt-3 ajax-modal" type="button" data-remote="/modal.html" data-target="#modal">Обратный звонок</button>
+          </div>
+          <img class="d-block w-100" src="assets/img/slider2.png" alt="">
+        </div>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#sliderMain" data-slide-to="0" class="active"></li>
+        <li data-target="#sliderMain" data-slide-to="1"></li>
+        <li data-target="#sliderMain" data-slide-to="2"></li>
+      </ol>
     </div>
-  </body>
+  </div>
+
+
+
+
+  <section class="py-5">
+    <div class="container">
+      <h1>Наша лучшая <br> <span class="txt_48px">продукция</span> </h1>
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-first-tab" data-toggle="tab" href="#nav-first" role="tab" aria-controls="nav-first" aria-selected="true">Полотенцесушители</a>
+          <a class="nav-item nav-link" id="nav-second-tab" data-toggle="tab" href="#nav-second" role="tab" aria-controls="nav-second" aria-selected="false">Электрические полотенцесушители</a>
+          <a class="nav-item nav-link" id="nav-third-tab" data-toggle="tab" href="#nav-third" role="tab" aria-controls="nav-third" aria-selected="false">Водяные полотенцесушители</a>
+        </div>
+
+
+
+
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-first" role="tabpanel" aria-labelledby="nav-first-tab">
+          <div class="row mt-4">
+            <% for(var i = 0; i < 8; i++){ %>
+              <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <%- include modules/item.ejs %>
+              </div>
+            <% } %>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="nav-second" role="tabpanel" aria-labelledby="nav-second-tab">
+          <div class="row mt-4">
+            <% for(var i = 0; i < 8; i++){ %>
+              <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <%- include modules/item.ejs %>
+              </div>
+            <% } %>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="nav-third" role="tabpanel" aria-labelledby="nav-third-tab"></div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-black">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 my-4">
+          <p class="slab txt_30px text-white mb-4">Какая-то акция</p>
+          <p class="text-white">Мы применяем современный метод лазерной сварки. Благодаря высокоэффективным технологиям, сварочный шов получается незаметным, а полотенцесушитель – прочным.</p>
+          <a class="text-white" href="#">Узнать подробности »</a>
+        </div>
+        <div class="col-md-6">
+          <a href="#"><img class="img-fluid h-100 object-fit-cover" src="assets/img/banner.png" alt="Баннер"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5">
+    <div class="container">
+      <p class="slab txt_30px mb-4">Информация о нас</p>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img class="img-fluid h-100 object-fit-cover" src="assets/img/about.png" alt="О нас">
+        </div>
+        <div class="col-md-6">
+          <p class="text-uppercase txt_18px txt-c-red">Компания Терминус</p>
+          <p>вот уже 15 лет занимает лидирующую позицию на рынке России и стран СНГ по выпуску полотенцесушителей и дизайн-радиаторов из нержавеющей стали!</p>
+          <p>Для производства продукции компания использует только высококачественную нержавеющую сталь марки AISI 304L с высоким содержанием легирующих элементов, Ni и Cr, это позволяет изделиям сохранять стойкость к агрессивным коррозийным средам, что существенно продлевает срок их эксплуатации. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 overflow-hidden">
+    <div class="border-red">
+      <div class="container">
+        <p class="mb-4"><span class="slab txt_30px mr-2">Отзывы о нас </span><a href="#">Все отзывы »</a></p>
+        <div class="row">
+          <div class="col-md-6">
+            <p><span class="txt_12px mr-2">19 января 2019</span><span class="txt_16px">Светлана Петрова</span></p>
+            <p>Исправлению подверглись лишь явные орфографические и пунктуационные погрешности, например, мелькание мыслей учитывает контрапункт. Классическое уравнение движения позволяет пренебречь колебаниями корпуса, хотя этого в любом случае требует зачин. Регулярная прецессия, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, параллельна.</p>
+          </div>
+          <div class="col-md-6">
+            <p><span class="txt_12px mr-2">19 января 2019</span><span class="txt_16px">Светлана Петрова</span></p>
+            <p>Исправлению подверглись лишь явные орфографические и пунктуационные погрешности, например, мелькание мыслей учитывает Исправлению подверглись лишь явные орфографические и пунктуационные погрешности, например, мелькание мыслей учитывает контрапункт. Классическое уравнение движения позволяет пренебречь колебаниями корпуса, хотя этого в любом случае требует зачин. Регулярная прецессия, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, параллельна.</p>
+          </div>
+        </div>
+        <a href="#" class="btn">Оставить свой отзыв</a>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <p class="mb-4"><span class="slab txt_30px mr-2">Последние новости </span><a href="#">Все новости »</a></p>
+    </div>
+    <div class="bg-gray py-5">
+      <div class="container">
+        <div class="row">
+          <% for(var i = 0; i < 4; i++){ %>
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+              <%- include modules/news.ejs %>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </section>
+  <%- include modules/footer.ejs %>
+
+</body>
 </html>

@@ -20,7 +20,11 @@
     "remove_dist_win": "del /s /q /f \"./dist\"",
     "start": "npm run dev"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "ion-rangeslider": "^2.3.0",
+    "slick-carousel": "^1.8.1"
+  },
   "devDependencies": {
     "bootstrap": "^4.0.0",
     "copy-webpack-plugin": "^4.5.0",

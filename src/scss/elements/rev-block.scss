@@ -1,0 +1,23 @@
+.rev-block {
+  padding-right: 2rem;
+  border-right: 1px solid $gray-200;
+  width: 100%;
+}
+
+.rev-holder{
+  border-bottom: 1px solid $gray-200;
+  display: flex;
+  &:last-child {
+    .rev-block {
+      padding-right: 0rem;
+      border-right: 0;
+    }
+  }
+  @media(max-width:991px) {
+    .rev-block {
+      padding-right: 0rem;
+      border-right: 0;
+    }
+  }
+}
+

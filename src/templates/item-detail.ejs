@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<%- include modules/header.ejs %>
+
+<section class="py-5">
+  <div class="container">
+    <div class="breadcrumbs">
+      <a href="/">Главная</a> » <a href="/">Покупателям</a> » Получение товара
+    </div>
+    <h1>АВИЭЛЬ П10 (6-4)</h1>
+  </div>
+  <hr class="mb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 position-relative mb-5">
+        <div class="position-sticky top-0">
+          <div class="slick-gallery">
+            <div class="slick-gallery__full" data-slick-full="true">
+              <% for (var i = 0; i < 10; i++) { %>
+                <figure>
+                  <img class="img-fluid" src="assets/img/prodxl.png" alt="1">
+                </figure>
+              <% } %>
+            </div>
+
+            <div class="slick-gallery__thumbnails" data-slick-thumb="true">
+              <% for (var i = 0; i < 10; i++) { %>
+                <img src="assets/img/prodxl.png" alt="1">
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-5">
+        <p class="slab txt_18px mb-3">Размеры продукта</p>
+        <div class="radio-list">
+          <form action="">
+            <div class="custom-control custom-radio no-inp">
+              <input type="radio" class="custom-control-input" id="razm1" name="razm" checked value="1">
+              <label class="custom-control-label" for="razm1">532/696/500</label>
+            </div>
+            <div class="custom-control custom-radio no-inp">
+              <input type="radio" class="custom-control-input" id="razm2" name="razm" value="2">
+              <label class="custom-control-label" for="razm2">532/1056/500</label>
+            </div>
+          </form>
+        </div>
+        <p class="slab txt_30px mн-4">17 460 руб.</p>
+        <div class="d-flex align-items-center mb-3">
+          <button class="btn red mr-3 cart-button"><img class="mr-2 d-none d-md-block" src="assets/vectors/cart-r.svg" alt="">Добавить в корзину</button>
+          <p class="txt_12px txt-c-gray-500 mb-0">Артикул: 4620768886393</p>
+        </div>
+        <div class="characters">
+          <div class="row">
+            <div class="col-auto characters__items">
+              <p>Серия</p>
+              <p>Форма</p>
+              <p>Тип полотенцесушителя</p>
+              <p>Подключение</p>
+              <p>Количество перекладин</p>
+              <p>Группировка</p>
+              <p>Проводка</p>
+              <p>ТеплоотдачаСерия</p>
+              <p>Форма</p>
+              <p>Тип полотенцесушителя</p>
+              <p>Подключение</p>
+              <p>Количество перекладин</p>
+              <p>Группировка</p>
+              <p>Проводка</p>
+              <p>Теплоотдача</p>
+            </div>
+            <div class="col-auto characters__vals">
+              <p>СТАНДАРТ</p>
+              <p>ЛЕСЕНКА</p>
+              <p>ВОДЯНОЙ</p>
+              <p>НИЖНЕЕ</p>
+              <p>14</p>
+              <p>6-4-4</p>
+              <p>НЕТ</p>
+              <p>519СТАНДАРТ</p>
+              <p>ЛЕСЕНКА</p>
+              <p>ВОДЯНОЙ</p>
+              <p>НИЖНЕЕ</p>
+              <p>14</p>
+              <p>6-4-4</p>
+              <p>НЕТ</p>
+              <p>519</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="slab txt_18px mb-3">Описание</p>
+        <p>Оливин формирует биокосный Млечный Путь, основными элементами которого являются обширные плосковершинные и пологоволнистые возвышенности. Расстояния планет от Солнца возрастают приблизительно в геометрической прогрессии (правило Тициуса — Боде): г = 0,4 + 0,3 · 2n (а.е.), где болотная руда деформирует далекий огненный пояс. Популяционный индекс точно опускает первоначальный pадиотелескоп Максвелла.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="preheader bg-black pt-5 pb-3">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 col-lg-3 mb-4">
+        <a href="#" class="d-flex align-items-center text-white txt_16px text-uppercase">
+          <img class="mr-4" src="assets/vectors/sheme.svg" alt="">
+          Схемы<br>
+          установки
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <a href="#" class="d-flex align-items-center text-white txt_16px text-uppercase">
+          <img class="mr-4" src="assets/vectors/find.svg" alt="">
+          НАЙТИ<br>
+          МАГАЗИН
+        </a>
+      </div>
+      <div class="col-md-12 col-lg-6 mb-4 border-left-white">
+        <div class="row align-items-center text-white">
+          <div class="col-12 col-md-auto my-5"><img class="w-auto" src="assets/vectors/w-logo.svg" alt=""></div>
+          <div class="col-12 col-md-auto">
+            <p class="slab txt_30px text-uppercase text-white">
+              10 ЛЕТ ГАРАНТИИ
+            </p>
+            <p class="txt_18px text-white">Именной гарантийный сертификат</p>
+            <button class="btn white">СМОТРЕТЬ ОБРАЗЕЦ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include modules/footer.ejs %>
+
+</body>
+</html>
